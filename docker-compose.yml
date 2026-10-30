@@ -1,0 +1,7 @@
+services:
+  prehrajto:
+    build: .
+    restart: unless-stopped
+    env_file: .env        # PUBLIC_URL, ADDON_TOKEN, TRUST_PROXY, TMDB_API_KEY
+    ports:
+      - "7000:7000"
